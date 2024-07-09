@@ -1,9 +1,9 @@
 {
-  	"name": "cscurlyformatter",
-  	"displayName": "C# Curly Formatter",
-  	"description": "C# formatting fixes collection.",
-  	"version": "0.0.7",
-  	"publisher": "Ironcutter24",
+  	"name": "cppcurlyformatter",
+  	"displayName": "C++ Curly Formatter",
+  	"description": "C++ formatting fixes collection.",
+  	"version": "0.1.0",
+  	"publisher": "yashelter",
   	"icon": "icon.png",
   	"engines": {
   	  	"vscode": "^1.75.0"
@@ -17,21 +17,21 @@
   	"contributes": {
   	  	"commands": [
   	  	  	{
-  	  	  	  	"command": "cscurlyformatter.curlyformat",
+  	  	  	  	"command": "cppcurlyformatter.curlyformat",
   	  	  	  	"title": "Curly Format"
   	  	  	}
   	  	],
   	  	"keybindings": [
   	  	  	{
   	  	  	  	"key": "enter",
-  	  	  	  	"command": "cscurlyformatter.curlyformat",
-  	  	  	  	"when": "editorLangId == csharp && editorTextFocus"
+  	  	  	  	"command": "cppcurlyformatter.curlyformat",
+  	  	  	  	"when": "(editorLangId == cpp || editorLangId == c || editorLangId == objective-c || editorLangId == objective-cpp) && editorTextFocus"
   	  	  	}
   	  	],
   	  	"configuration": {
-  	  	  	"title": "C# Curly Formatter",
+  	  	  	"title": "C++ Curly Formatter",
   	  	  	"properties": {
-  	  	  	  	"cscurlyformatter.autoTabIndentation": {
+  	  	  	  	"cppcurlyformatter.autoTabIndentation": {
   	  	  	  	  	"type": "boolean",
   	  	  	  	  	"description": "Enable automatic tab intendation style",
   	  	  	  	  	"default": true
@@ -55,6 +55,7 @@
   	  	"@typescript-eslint/eslint-plugin": "^5.1.0",
   	  	"@typescript-eslint/parser": "^5.1.0",
   	  	"@vscode/test-electron": "^1.6.2",
+  	  	"esbuild": "^0.23.0",
   	  	"eslint": "^8.1.0",
   	  	"glob": "^7.1.7",
   	  	"mocha": "^9.2.2",
@@ -62,11 +63,11 @@
   	},
   	"license": "SEE LICENSE IN LICENSE.md",
   	"bugs": {
-  	  	"url": "https://github.com/Ironcutter24/cs-curly-formatter/issues",
-  	  	"email": "ironcutter24@gmail.com"
+  	  	"url": "https://github.com/yashelter/cpp-curly-formatter/issues",
+  	  	"email": "yashelteer@gmail.com"
   	},
   	"repository": {
   	  	"type": "git",
-  	  	"url": "https://github.com/Ironcutter24/cs-curly-formatter/"
+  	  	"url": "https://github.com/yashelter/cpp-curly-formatter/"
   	}
 }

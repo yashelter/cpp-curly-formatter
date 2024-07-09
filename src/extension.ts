@@ -12,7 +12,7 @@ Object.freeze(Cursor);
 export function activate(context: vscode.ExtensionContext) {
 
     // The commandId parameter must match the command field in package.json
-    let disposable = vscode.commands.registerCommand('cscurlyformatter.curlyformat', () => {
+    let disposable = vscode.commands.registerCommand('cppcurlyformatter.curlyformat', () => {
         var editor = vscode.window.activeTextEditor;
         if (!editor)
             return false;
@@ -93,7 +93,7 @@ function convertIndentation() {
 }
 
 function hasAutoTab() {
-    return vscode.workspace.getConfiguration("cscurlyformatter").get("autoTabIndentation");
+    return vscode.workspace.getConfiguration("cppcurlyformatter").get("autoTabIndentation");
 }
 
 function hasSuggestionOnEnter() {
